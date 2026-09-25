@@ -58,6 +58,24 @@ Then start with:
 Use $automated-intermediary to create a case for my application and tell me the next action.
 ```
 
+### 如何准确调用 / Reliable invocation
+
+安装后，以下两种方式都会调用 Skill：
+
+After installation, either form can invoke the Skill:
+
+```text
+使用 $automated-intermediary 管理我在中国申请英国标准访客签证的完整流程。
+```
+
+```text
+我是中国大陆护照，在深圳申请英国旅游签。请作为中介接手，核验最新规则、审核材料并管理到提交前确认。
+```
+
+Codex 成功调用后，应先显示 `已启用 XY-SKILL-001 自动化中介`，再说明识别到的申请路径、当前阶段和下一步。只发送 GitHub 链接不会自动安装或调用 Skill；必须先安装，或者明确要求 Codex 读取仓库中的 `SKILL.md` 并按其执行。仓库模式只对当前任务提供指令，不等同于永久安装。
+
+After activation, Codex should show `已启用 XY-SKILL-001 自动化中介`, then identify the route, current stage, and next action. Sending only the GitHub URL does not install or invoke the Skill. Install it first, or explicitly ask Codex to read the repository's `SKILL.md` and follow it for the current task; repository-mode use is temporary, not a permanent installation.
+
 ## 结构 / Structure
 
 ```text
@@ -72,6 +90,7 @@ automated-intermediary/
     ├── source-policy.md
     ├── authorization-boundaries.md
     ├── domain-module-contract.md
+    ├── test-scenarios.md
     ├── modules/
     └── evaluations/
 ```
