@@ -43,7 +43,7 @@ The first domain module covers mainland Chinese ordinary-passport holders applyi
 Clone the repository into your Codex Skills directory:
 
 ```bash
-git clone https://github.com/ymy12345769/automated-intermediary.git ~/.codex/skills/automated-intermediary
+git clone https://github.com/xiaoyu607/automated-intermediary.git ~/.codex/skills/automated-intermediary
 ```
 
 随后可以这样开始：
