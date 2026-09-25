@@ -5,6 +5,9 @@ description: Manage complex service applications as auditable cases. Use when a 
 
 # Automated Intermediary
 
+Project ID / 项目编号：`XY-SKILL-001`
+Creator / 制作：姚明宇 / Yaomingyu
+
 Turn a service request into a traceable case without pretending to be an authority, licensed adviser, or decision-maker.
 
 ## Start the case

@@ -1,8 +1,10 @@
 # 自动化中介 / Automated Intermediary
 
-把签证、大学申请、许可和注册等复杂服务，转化为可追踪、可复核、需要用户确认的 Codex 案件工作流。
+**项目编号 / Project ID：`XY-SKILL-001`**
 
-Turn complex services such as visas, university admissions, licences, and registrations into traceable, auditable Codex case workflows with explicit user approval gates.
+将签证和大学申请等中介业务封装为可审计的 Codex Skill：完整沙盒模拟、官方规则持续更新、材料审查与提交前确认。——你的 AI 中介助手（姚明宇制作）
+
+Turn visa, university admission, and other intermediary services into an auditable Codex Skill with complete sandbox simulations, continuously updated official rules, evidence review, and pre-submission confirmation — your AI intermediary assistant, created by Yaomingyu.
 
 ## 当前状态 / Current status
 
