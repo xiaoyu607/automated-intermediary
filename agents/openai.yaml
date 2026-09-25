@@ -1,4 +1,4 @@
 interface:
   display_name: "自动化中介"
-  short_description: "将复杂申请转化为可追溯、可复核并需用户确认的案件工作流"
+  short_description: "以实时官方规则和沙盒验证管理复杂申请全流程"
   default_prompt: "使用 $automated-intermediary 为我的申请建立案件并告诉我下一步。"
