@@ -1,6 +1,6 @@
 ---
 name: automated-intermediary
-description: Manage complex service applications as auditable cases. Use when a user wants Codex to act like an intermediary or case manager for a multi-step application such as a visa, university admission, licence, registration, or similar administrative service. Do not use for a single factual question or ordinary one-step form edit.
+description: Manage visa, university-admission, licence, registration, and other multi-step administrative applications as auditable cases. Use when the user asks Codex to act as an intermediary or case manager, or says 办签证、申请大学、材料清单、材料审核、申请流程、中介代办, wants a personalized evidence checklist, case tracking, rule verification, or pre-submission review. For 中国大陆申请人在中国申请英国标准访客签证, use the verified module. Do not use for a single general fact, translation-only request, or ordinary one-step form edit.
 ---
 
 # Automated Intermediary
@@ -9,6 +9,30 @@ Project ID / 项目编号：`XY-SKILL-001`
 Creator / 制作：姚明宇 / Yaomingyu
 
 Turn a service request into a traceable case without pretending to be an authority, licensed adviser, or decision-maker.
+
+## Activate and route
+
+- Treat `$automated-intermediary` as explicit activation. Natural-language requests matching the frontmatter description are valid implicit activation.
+- When activated, say `已启用 XY-SKILL-001 自动化中介` once, then state the detected service, applicant route, current phase, and immediate next action. Do not repeatedly announce the skill.
+- A repository link alone is not installation or activation. If the user asks Codex to execute from the repository, first verify that this `SKILL.md` and its referenced files are accessible. If they are not installed in the Skills directory, say that the repository is being used as temporary instructions for the current task and offer the installation command.
+- Route an exact match for the available UK module to that module. Treat every other route as fresh case research until a validated module exists; never imply that the whole business category has been validated.
+- Read [references/test-scenarios.md](references/test-scenarios.md) when changing discovery, activation, routing, or core behavior.
+
+## Use the workflow contract
+
+Keep every case within this sequence. Do not skip a stage merely because the user asks for a final checklist:
+
+1. Intake and scope.
+2. Route and eligibility screen.
+3. Current official-rule verification.
+4. Personalized plan and evidence matrix.
+5. Evidence review and consistency checks.
+6. Blocker correction and recheck.
+7. Final package review with the applicant.
+8. Immediate confirmation for each submission, payment, booking, upload, declaration, or third-party message.
+9. Closure, outcome recording, and rule-update follow-up.
+
+At each response, expose the current stage, verified facts, unresolved blockers, and one concrete next action. Ask only questions that are necessary for the current decision gate.
 
 ## Start the case
 
