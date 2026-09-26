@@ -1,6 +1,6 @@
 # Domain module contract / 业务模块接口
 
-Read this reference before applying a visa, university, licence, registration, or other specialist module.
+Read this reference before applying a visa module. This Skill does not manage university admission, licences, registrations or other non-visa services.
 
 ## Minimum contents of a module
 
@@ -29,5 +29,4 @@ State maturity at the granularity actually tested. Never convert “one UK visit
 
 ## Extension rule
 
-Keep shared case management in the core skill. Put volatile country, institution, category, and portal details in the domain module. Do not duplicate the same rule in several modules; link to its maintained source and define any narrower exception.
-
+Keep shared case management in the core skill. Put volatile country, visa category, applicant-profile, and portal details in the visa module. Do not duplicate the same rule in several modules; link to its maintained source and define any narrower exception.

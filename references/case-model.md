@@ -5,8 +5,8 @@ Read this reference when creating, resuming, or changing a case.
 ## Required case fields
 
 - `case_id`: non-sensitive stable identifier.
-- `service`: requested service.
-- `jurisdiction`: authority or institution responsible.
+- `service`: requested visa application (not admission or general travel planning).
+- `jurisdiction`: visa authority responsible.
 - `category`: exact application category when known.
 - `applicant_profile`: only facts needed for the workflow.
 - `target_outcome`: the user's desired result, not a promised result.
@@ -40,4 +40,3 @@ Each risk needs a trigger, consequence, prevention or fix, evidence/source, owne
 ## Session checkpoint
 
 Every pause or handoff should preserve the state, completed work, unresolved items, next action, responsible person, deadline, and rules that must be refreshed.
-

@@ -4,7 +4,7 @@ Use this reference whenever eligibility, documents, fees, dates, procedures, or 
 
 ## Source hierarchy
 
-1. Binding or primary sources: law, regulation, official government, embassy, consulate, university, regulator, or issuing authority.
+1. Binding or primary sources: law, regulation, official government, embassy, consulate, immigration regulator, or visa-issuing authority.
 2. Official operational sources: the authority's application portal, authorised service provider, help centre, form instructions, or appointment system.
 3. Secondary professional sources: recognised professional bodies or regulated advisers.
 4. Community reports: forums, social posts, videos, applicant reports, and intermediary articles.
@@ -37,4 +37,3 @@ Label information as one of:
 - `UNKNOWN`: material fact not yet verified.
 
 Never promote a lower-confidence label without new evidence.
-

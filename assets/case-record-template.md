@@ -1,6 +1,6 @@
 ---
 case_id: ""
-service: ""
+service: "visa_application"
 jurisdiction: ""
 category: ""
 applicant_profile: ""

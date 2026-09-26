@@ -1,6 +1,6 @@
 interface:
-  display_name: "自动化中介"
-  short_description: "以实时官方规则和沙盒验证管理复杂申请全流程"
-  default_prompt: "使用 $automated-intermediary 管理我的签证、大学申请或其他复杂行政申请；先确认适用范围、核验最新官方规则并告诉我下一步，不要提交、付款或预约。"
+  display_name: "签证申请中介"
+  short_description: "按官方规则和沙盒记录管理签证申请流程"
+  default_prompt: "使用 $automated-intermediary 管理我的签证申请；先确认国家和签证类别、核验最新官方规则并告诉我下一步，不要提交、付款或预约。"
 policy:
   allow_implicit_invocation: true

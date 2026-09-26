@@ -1,6 +1,6 @@
 ---
 name: automated-intermediary
-description: Manage visa, university-admission, licence, registration, and other multi-step administrative applications as auditable cases. Use when the user asks Codex to act as an intermediary or case manager, or says 办签证、申请大学、材料清单、材料审核、申请流程、中介代办, wants a personalized evidence checklist, case tracking, rule verification, or pre-submission review. Visitor modules cover verified routes for mainland Chinese applicants, including UK, Canada, Australia, Schengen, New Zealand and selected eVisa/ETA destinations; stop if an individual formal interview is required. Do not use for a single general fact, translation-only request, or ordinary one-step form edit.
+description: Manage visa applications as auditable cases for mainland Chinese applicants. Use for 签证申请、旅游签、商务签、学生签、材料清单或审核、签证流程、中介代办 when the user wants eligibility screening, official-rule verification, case tracking, or pre-submission review. Execute only exact verified visa modules; pause if an individual formal interview is required. Do not use for university admission, licences, registrations, visa-free travel planning, translation-only, or one-step facts.
 ---
 
 # Automated Intermediary
@@ -8,14 +8,15 @@ description: Manage visa, university-admission, licence, registration, and other
 Project ID / 项目编号：`XY-SKILL-001`
 Creator / 制作：姚明宇 / Yaomingyu
 
-Turn a service request into a traceable case without pretending to be an authority, licensed adviser, or decision-maker.
+Turn a **visa application** into a traceable case without pretending to be a visa authority, licensed immigration adviser, or decision-maker. University admissions, licences, registrations and general travel planning are outside this Skill even when they relate to a visa case. A visa case may inspect an admission letter as evidence; it does not manage the admission application.
 
 ## Activate and route
 
 - Treat `$automated-intermediary` as explicit activation. Natural-language requests matching the frontmatter description are valid implicit activation.
-- When activated, say `已启用 XY-SKILL-001 自动化中介` once, then state the detected service, applicant route, current phase, and immediate next action. Do not repeatedly announce the skill.
+- When activated, say `已启用 XY-SKILL-001 签证申请中介` once, then state the detected visa category, applicant route, current phase, and immediate next action. Do not repeatedly announce the skill.
 - A repository link alone is not installation or activation. If the user asks Codex to execute from the repository, first verify that this `SKILL.md` and its referenced files are accessible. If they are not installed in the Skills directory, say that the repository is being used as temporary instructions for the current task and offer the installation command.
-- For visitor visas, read [references/online-visitor-visa-workflow.md](references/online-visitor-visa-workflow.md) and [references/global-online-route-screen.md](references/global-online-route-screen.md), then route exact matches to a module below. First distinguish visa-free, ETA, eVisa, full online visa, online-form-only and mandatory agency/in-person submission. The Skill's research and evidence review can be online even when the applicant must personally lodge documents, answer routine counter questions, give biometrics, or deliver a passport. Exclude routes with a routine formal consular interview. If an authority requests an individual interview, pause this Skill's execution for that case and hand the interview step to the applicant or qualified human adviser.
+- For visitor visas, read [references/online-visitor-visa-workflow.md](references/online-visitor-visa-workflow.md) and [references/global-online-route-screen.md](references/global-online-route-screen.md), then route exact matches to a module below. First distinguish visa-free, ETA, eVisa, full online visa, online-form-only and mandatory agency/in-person submission. If the traveller is visa-free or only needs a non-visa travel authorization, state that no visa application is needed and end this Skill's case-management path; the screen remains a historical decision aid, not authorization to manage entry-card/eTA tasks. The Skill's research and evidence review can be online even when the applicant must personally lodge documents, answer routine counter questions, give biometrics, or deliver a passport. Exclude routes with a routine formal consular interview. If an authority requests an individual interview, pause this Skill's execution for that case and hand the interview step to the applicant or qualified human adviser.
+- For non-tourism visas, identify the exact country, category, applicant and application location. Read [references/non-tourism-visa-expansion.md](references/non-tourism-visa-expansion.md). Use a verified module only on an exact match; otherwise provide labelled source research and a proposed test plan, never a completed application workflow.
 - Read [references/test-scenarios.md](references/test-scenarios.md) when changing discovery, activation, routing, or core behavior.
 
 ## Use the workflow contract
@@ -36,7 +37,7 @@ At each response, expose the current stage, verified facts, unresolved blockers,
 
 ## Start the case
 
-1. Identify the service, jurisdiction, category, applicant, target outcome, deadline, and current stage.
+1. Identify the visa jurisdiction, category, applicant, application location, target outcome, deadline, and current stage.
 2. Ask only for missing facts that materially change eligibility, required evidence, timing, cost, or risk. Never ask the user to paste passwords, one-time codes, full payment credentials, or unnecessary identity data.
 3. If this is a new case, offer to create a private case record from [assets/case-record-template.md](assets/case-record-template.md). Do not create files unless the user asks to begin or manage the case.
 4. Read [references/case-model.md](references/case-model.md) when creating, resuming, or changing a case state.
@@ -64,20 +65,20 @@ Produce only the detail useful at the current stage:
 
 For each evidence item, check identity, date, validity, legibility, completeness, provenance, translation, and consistency with forms and other evidence. Do not infer facts merely to make documents agree.
 
-Before using a business-specific module, read [references/domain-module-contract.md](references/domain-module-contract.md). If no verified module exists, work from current official sources and label the result as case research, not a validated module.
+Before using a visa-specific module, read [references/domain-module-contract.md](references/domain-module-contract.md). If no verified module exists, work from current official sources and label the result as case research, not a validated module.
 
-### Available business module
+### Available visa modules
 
 - UK Standard Visitor, mainland Chinese ordinary passport, applying in mainland China: [UK module](references/modules/uk-standard-visitor-china.md). Its recorded baseline is `M2 DRY_RUN`.
 - Canada visitor visa, mainland Chinese ordinary passport, applying in mainland China online: [Canada module](references/modules/canada-visitor-china.md). Current level: `M1 OFFICIAL_REVIEWED`.
 - Australia Visitor visa subclass 600 Tourist stream, mainland Chinese ordinary passport, applying outside Australia from mainland China online: [Australia module](references/modules/australia-visitor-600-china.md). Current level: `M1 OFFICIAL_REVIEWED`.
+- Australia Visitor visa subclass 600 **Business Visitor stream**, mainland Chinese ordinary passport, applying outside Australia from mainland China online for permitted business visitor activities: [Business Visitor module](references/modules/australia-business-visitor-600-china.md). `M2 DRY_RUN` only for the recorded fictional employed-adult conference/contract-meeting case; no live portal or real applicant tested.
 - Schengen short-stay individual tourism, mainland Chinese ordinary passport, applying in mainland China: [Schengen module](references/modules/schengen-tourism-china.md). The common EU/China rules and official entry points for France, Germany, Italy, Spain, Netherlands and Switzerland are `M1 OFFICIAL_REVIEWED`; each live case must open the competent country's current checklist.
 - New Zealand Visitor Visa, mainland Chinese ordinary passport, individual tourism from China: [New Zealand module](references/modules/new-zealand-visitor-china.md), `M2 DRY_RUN` only for its recorded fictional single-adult tourism profile; broader route remains first-party reviewed, not live tested.
 - Saudi tourist eVisa, same applicant profile: [Saudi module](references/modules/saudi-tourist-evisa-china.md), `M1 OFFICIAL_REVIEWED`.
 - Indonesia tourist e-VOA, same applicant profile: [Indonesia module](references/modules/indonesia-evoa-china.md), `M1 OFFICIAL_REVIEWED` for route screening; live product/portal details must be rechecked.
 - Sri Lanka tourist ETA, same applicant profile: [Sri Lanka module](references/modules/sri-lanka-tourist-eta-china.md), `M1 OFFICIAL_REVIEWED`.
-- Kenya tourist eTA, same applicant profile: [Kenya module](references/modules/kenya-tourist-eta-china.md), `M1 OFFICIAL_REVIEWED` for the ordinary-passport route and official document classes.
-- Cambodia individual tourism, same applicant profile: [Cambodia time-limited route](references/modules/cambodia-tourist-china.md), `M1 OFFICIAL_REVIEWED` only for its explicitly dated 2026 waiver decision; post-expiry entry rules are not verified.
+- Kenya eTA and Cambodia's time-limited visa waiver are **screening-only historical references**, not visa-application execution modules. Do not open a visa application case solely to complete those travel authorizations or entry cards.
 
 Read the selected module's official-source registry before giving case-specific requirements. A completed cross-country fictional walkthrough does not upgrade an untested portal or a real case to `M2`.
 
