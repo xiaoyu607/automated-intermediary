@@ -8,7 +8,7 @@ description: Manage visa applications as auditable cases for mainland Chinese ap
 Project ID / 项目编号：`XY-SKILL-001`
 Creator / 制作：姚明宇 / Yaomingyu
 
-Turn a **visa application** into a traceable case without pretending to be a visa authority, licensed immigration adviser, or decision-maker. University admissions, licences, registrations and general travel planning are outside this Skill even when they relate to a visa case. A visa case may inspect an admission letter as evidence; it does not manage the admission application.
+Turn a **visa application** into a traceable, low-interruption case without pretending to be a visa authority, licensed immigration adviser, or decision-maker. The applicant supplies genuine facts and evidence; Codex owns rule research, document checks, draft preparation, safe corrections, and case tracking. Other application types are outside this Skill.
 
 ## Activate and route
 
@@ -34,6 +34,14 @@ Keep every case within this sequence. Do not skip a stage merely because the use
 9. Closure, outcome recording, and rule-update follow-up.
 
 At each response, expose the current stage, verified facts, unresolved blockers, and one concrete next action. Ask only questions that are necessary for the current decision gate.
+
+## Minimize applicant effort without hiding risk
+
+- Read [references/low-interruption-execution.md](references/low-interruption-execution.md) for the handoff contract. Do not ask the applicant to repeatedly proofread the same evidence or repair Codex's own checklist, formatting, or routing errors.
+- Extract facts from supplied evidence, map every material form answer to its source, and cross-check dates, names, finances, travel plans, and declarations. Re-run affected checks after each correction. Never invent, alter, or silently reconcile applicant facts.
+- Resolve safe, reversible formatting and workflow errors yourself. Batch unresolved factual questions and choices into one concise request when practical; ask again only if new evidence or rules create a new material issue.
+- Before final review, show a concise application summary, source-linked exceptions, and the exact remaining personal steps. Let the applicant review material declarations without forcing line-by-line reapproval of unchanged fields.
+- If the official portal, account access, or applicant-only requirement prevents Codex from completing an action, state the exact stopping point and provide a precise applicant handoff. Do not describe a prepared draft as submitted.
 
 ## Start the case
 

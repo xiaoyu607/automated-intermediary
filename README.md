@@ -2,11 +2,45 @@
 
 **项目编号 / Project ID：`XY-SKILL-001`**
 
-将签证申请封装为可审计的 Codex Skill：分签证类别核验官方规则、沙盒模拟、材料审查与提交前确认。——你的 AI 签证申请助手（姚明宇制作）
+让申请人准备真实资料，由 Codex 接手签证申请的规则核验、材料审查、表格准备、纠错和递交跟进；关键动作由申请人确认，过程可追溯。——你的 AI 签证申请助手（姚明宇制作）
 
-Turn visa applications into auditable Codex cases with category-specific official-rule checks, sandbox simulations, evidence review and pre-submission confirmation — your AI visa-application assistant, created by Yaomingyu.
+Prepare your genuine documents; let Codex handle visa-rule checks, evidence review, form preparation, corrections, and submission tracking, with your approval at consequential steps and an auditable record. Your AI visa-application assistant, created by Yaomingyu.
 
-**范围 / Scope:** 本 Skill 仅用于签证申请，不办理大学申请、许可登记或一般旅行规划。录取通知书可以作为学生签证材料审核，但学校申请本身不在本 Skill 内。免签与非签证旅行许可只用于判断“是否需要签证”，不在本 Skill 内建立办理案件。 / This Skill handles visa applications only, not university admissions, licences, registrations or general travel planning. Admission letters may be reviewed as visa evidence, but admission applications and visa-free/non-visa travel authorizations are outside case execution.
+**范围 / Scope:** `XY-SKILL-001` 只处理签证申请。免签和非签证旅行许可只用于判断是否需要签证，不建立申请案件。 / `XY-SKILL-001` handles visa applications only. Visa-free travel and non-visa travel authorizations are screened but not managed as application cases.
+
+## 这个 Skill 如何帮你 / How it helps
+
+你只需说明申请目标、提供真实资料，并处理必须由本人完成的步骤。Codex 应当主动完成可代办的工作：核验当前官方要求，生成个人化材料清单，逐份检查并交叉核对材料，准备申请表答案与上传清单，修正自己能安全修正的格式或流程问题，跟进递交前后的状态。它不能凭空补写个人事实，也不会把未经核验的申请称为“已完成”。
+
+Tell Codex your visa goal and provide genuine facts and documents. Codex should check current official requirements, build a personalised evidence list, cross-check documents, prepare form answers and an upload plan, fix safe formatting or workflow errors, and track the case. It must never invent applicant facts or claim an unverified application is complete.
+
+**低打扰原则 / Low-interruption principle:** 不要求你反复核对同一份材料，也不把 Codex 自己可以排查的问题丢回给你。Codex 应先自行核验和复查，把真正缺失、矛盾或必须由你决定的问题集中提出；材料准备完成后，给你一份简明的最终申请摘要供审阅。若官方系统允许且已取得必要授权，Codex 可以协助推进至递交；提交、付款、预约、上传、法律声明或向第三方发送信息前，仍须就该次具体动作取得即时确认。指纹、面试、身份验证等必须本人完成的环节由申请人办理。
+
+**Low-interruption principle:** Codex checks and rechecks its own work instead of repeatedly asking you to proofread the same material. It groups genuine missing facts, contradictions, and choices into concise questions, then presents a final application summary for your review. Where the official portal and available access allow, Codex can help progress the case through submission; each upload, submission, payment, booking, legal declaration, or third-party message still needs immediate action-specific approval. The applicant handles required biometrics, interviews, and identity checks.
+
+这是一套**按具体签证路径逐步验证的测试版流程**，不是“所有国家、所有签证都能自动递交”的承诺。官方规则、实际表单、账号权限或现场要求可能使某一步无法由 Codex 操作；遇到这种情况，Codex 应明确说明已完成到哪里、剩余动作由谁执行，并给出可直接照做的交接清单。
+
+This is a **route-specific beta**, not a promise of automatic submission for every country or visa type. If a rule, live form, account permission, or in-person requirement prevents Codex from acting, it must report the exact stopping point, owner, and handoff steps.
+
+## 最简单的开始方式 / Quick start
+
+安装后提供申请目标和已有资料，例如：
+
+Once installed, state your visa goal and what you already have, for example:
+
+```text
+使用 $automated-intermediary 接手我在中国申请英国标准访客签证。
+请核验最新官方规则，告诉我一次性需要准备哪些真实资料；
+收到资料后自行审查、纠错、准备申请，并尽可能推进到递交。
+只在事实缺失、本人必须操作或关键外部动作前向我确认。
+```
+
+```text
+Use $automated-intermediary to manage my UK Standard Visitor visa application from China.
+Check current official rules, tell me what genuine information and documents to prepare,
+then review, correct, and prepare the application and help advance it to submission.
+Ask me only for missing facts, required personal steps, and action-specific approvals.
+```
 
 ## 当前状态 / Current status
 
@@ -36,6 +70,8 @@ Codex reviews visa rules and evidence remotely and distinguishes visa-free, ETA,
 - 建立带状态、任务、材料、风险、来源、决策和确认记录的案件；
 - 根据申请人情况生成个性化材料矩阵，而不是复制通用中介清单；
 - 检查身份、日期、有效期、可读性、完整性、来源、翻译和材料一致性；
+- 将已核实的事实对应到申请表字段，准备表格答案、上传清单和递交交接步骤；
+- 自行复查并修正安全、可逆的格式或流程错误；只把无法自行确认的事实问题交给申请人；
 - 将问题区分为 `BLOCKER`、`WARNING` 和 `ADVISORY`；
 - 在提交、付款、预约、上传、声明或向第三方发送信息前停止并取得即时确认；
 - 保存来源与核验日期，便于官方规则变化后的更新与回归测试。
@@ -43,6 +79,8 @@ Codex reviews visa rules and evidence remotely and distinguishes visa-free, ETA,
 - Creates cases with states, tasks, evidence, risks, sources, decisions, and approval records.
 - Builds applicant-specific evidence matrices instead of generic intermediary checklists.
 - Checks identity, dates, validity, legibility, completeness, provenance, translation, and cross-document consistency.
+- Maps verified facts to form fields and prepares form answers, an upload plan, and submission handoff steps.
+- Rechecks and fixes safe, reversible formatting or workflow errors; escalates unresolved factual questions only.
 - Classifies issues as `BLOCKER`, `WARNING`, or `ADVISORY`.
 - Stops for immediate approval before submission, payment, booking, upload, declarations, or third-party disclosure.
 - Records sources and verification dates for rule-change maintenance and regression testing.
@@ -100,6 +138,7 @@ automated-intermediary/
     ├── case-model.md
     ├── source-policy.md
     ├── authorization-boundaries.md
+    ├── low-interruption-execution.md
     ├── domain-module-contract.md
     ├── online-visitor-visa-workflow.md
     ├── test-scenarios.md

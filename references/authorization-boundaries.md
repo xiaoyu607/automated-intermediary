@@ -5,6 +5,7 @@ Read this reference before any consequential external action.
 ## Actions requiring immediate confirmation
 
 - submit, withdraw, amend, or cancel an application;
+- upload a document or enter applicant data into an external visa portal;
 - pay a fee, purchase a service, or accept financial terms;
 - book, reschedule, or cancel an appointment;
 - sign, certify, attest, or make a legal declaration;
