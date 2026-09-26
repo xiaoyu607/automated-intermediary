@@ -1,12 +1,12 @@
 # Online visitor visa workflow / 线上访客签证完整流程
 
-Scope / 范围：mainland Chinese ordinary-passport holders applying from mainland China for UK Standard Visitor, Canada visitor visa, or Australian subclass 600 Tourist stream. This is a case-management process; the government decides the application. Last reviewed: 2026-09-26.
+Scope / 范围：mainland Chinese ordinary-passport holders applying from mainland China for UK Standard Visitor, Canada visitor visa, Australian subclass 600 Tourist stream, or Schengen short-stay individual tourism. Codex performs the research and evidence review online; the applicant performs any required lodging or identity step. The government decides the application. Last reviewed: 2026-09-26.
 
 ## Route gate / 路由关卡
 
 Ask for nationality and passport type, residence and application location, destination, exact purpose, intended dates, companions/minors, funding, previous immigration problems, and whether an interview has already been requested. Choose exactly one country module. A work, study, immigration, medical, marriage, transit, or sponsored-family route needs its own rules. Do not fit it into a tourist module.
 
-The standard application must have an online form and document review without a routine interview. Exclude US B1/B2 (interviews generally required), Japan tourism from China (designated agency route), and Schengen short-stay (consular or application-centre lodging). These can be researched separately only if the user changes scope. If a UK, Canada, or Australia case is individually called for interview, record `INTERVIEW_REQUIRED`, stop automated case execution for that step, and explain the authority's instructions. Do not coach scripted answers or pretend that biometrics are an interview.
+The Skill's review is remote; government submission may be online or at a centre. Exclude US B1/B2 because its ordinary route generally requires a formal interview. Japan tourism from China remains outside this release because its designated-agency route has not been modelled. A Schengen application-centre visit for lodging, routine trip questions, or fingerprints is not itself a consular interview. If any supported case is individually called for a formal interview, record `INTERVIEW_REQUIRED`, stop automated execution for that step, and explain the authority's instructions. Never script answers or treat fingerprints as an interview.
 
 ## Nine gates / 九个关卡
 
@@ -29,5 +29,6 @@ At every gate report state, verified facts, blockers, next action, owner, and da
 | UK | genuine visitor, permitted activity, departure, funds and third-party support | online form and evidence; VAC biometrics when instructed | interview or another unsupported purpose |
 | Canada | temporary stay, ties and departure, funds, admissibility | IRCC online application; biometrics if required; passport submission after approval | interview request or inadmissibility requiring specialist advice |
 | Australia | genuine visitor, sufficient funds, health and character, Tourist stream conditions | ImmiAccount and attachments; biometrics or health checks if requested | interview request or wrong stream |
+| Schengen tourism | competent main-destination country, purpose, funds, accommodation, travel insurance, return intention | country form/appointment; applicant lodges documents and biometrics as instructed | formal interview request or wrong country/purpose |
 
-Translation rules differ by country. Never copy the UK translator declaration into a Canada or Australia case without checking that module.
+Translation rules differ by country. Never copy one country's translation or filename rule into another country's case without checking its module and live checklist.

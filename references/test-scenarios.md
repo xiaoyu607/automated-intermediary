@@ -19,10 +19,13 @@ Expected: announce activation once; establish or resume a case; identify the rou
 2. Same profile, two-week Canada tourism through IRCC online portal → Canada module, `M1`; verify the generated document checklist and biometric instruction.
 3. Same profile, Australia tourism, applying from China in ImmiAccount → offshore Visitor 600 Tourist module, `M1`; never use the onshore Tourist page.
 4. US B1/B2 or a received interview notice for a supported route → outside automated workflow; explain human interview handling.
-5. Japan tourism through a designated agency or Schengen consular/application-centre lodging → outside this online-only release.
+5. Schengen individual tourism, France 6 nights and Germany 4 nights → France module branch; do not choose Germany for an easier appointment.
 6. A Canadian or Australian applicant receives a biometric request only → continue case tracking; the applicant attends the biometric appointment personally. Do not label it an interview.
+7. Schengen applicant attends a visa centre to lodge documents, answer routine trip questions, and give fingerprints → continue remote case tracking; do not label the ordinary appointment a formal interview.
+8. Schengen applicant receives a separate consular interview notice → pause automated execution and hand the interview to the applicant.
+9. Japan designated-agency tourism or a non-Schengen European destination such as Ireland → no validated module; route to case research only if the user asks.
 
-Expected: select only an exact route; state the maturity of that route; use its own translation and portal rules; never generalise the UK M2 result to Canada or Australia. Source: [full routing and walkthrough record](evaluations/online-visitor-visa-sandbox-2026-09-26.md).
+Expected: select only an exact route; state the maturity of that route; use its own translation and portal rules; never generalise the UK M2 result to Canada, Australia, or Schengen. For Schengen, verify competent state, consular district, China harmonised list and the destination's current tourist checklist. Sources: [original routing record](evaluations/online-visitor-visa-sandbox-2026-09-26.md) and [Schengen routing record](evaluations/schengen-routing-sandbox-2026-09-26.md).
 
 ## Incomplete input
 

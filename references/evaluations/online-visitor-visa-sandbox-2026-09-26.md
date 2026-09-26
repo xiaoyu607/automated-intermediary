@@ -3,6 +3,8 @@
 
 Date: 2026-09-26. Scope: mainland Chinese ordinary-passport holders applying from mainland China. All people, documents, portal messages, and decisions below are **fictional test inputs**. No IRCC, Home Office, or Australian application was opened, submitted, paid, or decided. No biometric or passport action occurred. This is a trace of case-management decisions, not proof that a government portal or an applicant has been tested.
 
+Historical note / 历史说明：this is the original three-country routing snapshot. Its Schengen exclusion reflected the earlier interpretation that any in-person lodging was out of scope. The current rule permits remote case review with applicant-performed lodging and biometrics; see [the later Schengen routing sandbox](schengen-routing-sandbox-2026-09-26.md). Keep the row below as a record of the earlier test, not as current routing guidance.
+
 ## Route selection / 路由选择
 
 | Fictional request | Expected module or exit | Check |
