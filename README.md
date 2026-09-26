@@ -12,18 +12,21 @@ Turn visa, university admission, and other intermediary services into an auditab
 > No completed live applicant case yet / 尚无真实申请人完整闭环
 > Last official-source review / 最近官方来源核验：2026-09-26
 
-当前面向中国大陆普通护照持有人、从中国大陆申请，包含四类访客签证路径：
+当前面向中国大陆普通护照持有人、从中国大陆申请，包含以下已核对的访客路径；成熟度按具体路径区分：
 
 - 英国 Standard Visitor：普通旅游与探亲访友的既有范围为 `M2 DRY_RUN`；
 - 加拿大 Visitor Visa：线上申请及材料审核模块为 `M1 OFFICIAL_REVIEWED`；
 - 澳大利亚 Visitor 600 Tourist stream（境外申请）：线上申请及材料审核模块为 `M1 OFFICIAL_REVIEWED`。
 - 申根个人旅游短期签证：欧盟共同规则与中国材料清单为 `M1 OFFICIAL_REVIEWED`；已核验法国、德国、意大利、西班牙、荷兰、瑞士的官方申请入口。每宗案件仍需按实际主目的国核验当期清单。
+- 新西兰 Visitor Visa：单名成人旅游虚构案例达到 `M2 DRY_RUN`；其他申请人情况仅为 `M1 OFFICIAL_REVIEWED`，新申请使用当期官方线上系统；
+- 沙特旅游 eVisa、印尼旅游 e-VOA、斯里兰卡旅游 ETA、肯尼亚旅游 eTA：各为 `M1 OFFICIAL_REVIEWED`，付款、产品、入境口岸和动态表单仍须逐案核验；
+- 柬埔寨：仅对官方公告的 **2026-06-15 至 2026-10-15、每次不超过 14 天** 中国游客临时免签分流达到 `M1`；超过日期或时长必须重新核实。
 
-Four visitor-visa route families cover mainland Chinese ordinary-passport holders applying from mainland China: UK Standard Visitor (`M2 DRY_RUN` baseline), Canada Visitor Visa (`M1 OFFICIAL_REVIEWED`), Australia's offshore Visitor 600 Tourist stream (`M1 OFFICIAL_REVIEWED`), and Schengen individual tourism (`M1 OFFICIAL_REVIEWED` for common EU/China rules and six official country entry points). The competent country's current checklist must still be verified for each case.
+Verified visitor routes for mainland Chinese ordinary-passport holders applying from mainland China now include UK Standard Visitor (`M2` baseline), Canada, Australia's offshore Visitor 600 Tourist stream, Schengen individual tourism, New Zealand Visitor Visa (`M2` only for one fictional adult-tourism dry run), and M1 Saudi eVisa, Indonesian e-VOA, Sri Lankan ETA and Kenyan eTA routes. Cambodia has an M1 **time-limited** Chinese-tourist visa-waiver gate, not a permanent exemption. All other profiles require fresh official checks; this is not worldwide coverage.
 
-Codex 在线核验规则、审核材料和管理进度。申根签证可能要求申请人到签证中心递交材料、回答常规行程问题并录指纹；这不等于领馆正式面试。美国 B1/B2 常规需要面试，暂不纳入；日本旅游签的指定机构路线尚未建模。若任一受支持个案收到正式面试通知，Skill 暂停该案并提示人工处理。爱尔兰、塞浦路斯等非申根欧洲签证不在申根模块范围内。
+Codex 在线核验规则、审核材料和管理进度。Skill 先区分免签、ETA、电子签、完整线上签证、仅线上填表和强制代理路径；“线上填表”不等于“线上提交”。申根签证可能要求申请人到签证中心递交材料、回答常规行程问题并录指纹；这不等于领馆正式面试。美国 B1/B2 常规需要面试，暂不纳入；日本旅游签在中国须经指定机构，不能由 Codex 独立替代。若任一受支持个案收到正式面试通知，Skill 暂停该案并提示人工处理。爱尔兰、塞浦路斯等非申根欧洲签证不在申根模块范围内。
 
-Codex reviews rules and evidence remotely. Schengen applicants may have to lodge documents, answer routine trip questions, and provide fingerprints at a visa centre; these are distinct from a formal consular interview. US B1/B2 generally requires an interview and is outside scope. Japan's designated-agency route has not been modelled. A formal interview request pauses the automated case path. Ireland and Cyprus are not covered by the Schengen module.
+Codex reviews rules and evidence remotely and distinguishes visa-free, ETA, eVisa, full online application, online-form-only and required-agency routes. Schengen applicants may have to lodge documents, answer routine trip questions, and provide fingerprints at a visa centre; these are distinct from a formal consular interview. US B1/B2 generally requires an interview and is outside scope. Japan's accredited-agency route cannot be independently replaced. A formal interview request pauses the automated case path. Ireland and Cyprus are not covered by the Schengen module.
 
 ## 能做什么 / What it does
 
@@ -121,6 +124,8 @@ The recorded M2 sandbox ran from intake to simulated `READY_TO_SUBMIT` and detec
 - [申根模块 / Schengen tourism module](references/modules/schengen-tourism-china.md)
 - [申根官方来源台账 / Schengen official source registry](references/modules/schengen-tourism-china-sources.md)
 - [申根路由沙盒 / Schengen routing sandbox](references/evaluations/schengen-routing-sandbox-2026-09-26.md)
+- [全球线上路径筛选 / Global online-route screen](references/global-online-route-screen.md)
+- [新增路径沙盒与纠错 / Global route sandbox and correction log](references/evaluations/global-online-routes-sandbox-2026-09-26.md)
 - [模块测试集 / Module test set](references/modules/uk-standard-visitor-china-tests.md)
 - [官方来源台账 / Official source registry](references/modules/uk-standard-visitor-china-sources.md)
 

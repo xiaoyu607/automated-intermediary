@@ -24,6 +24,13 @@ Expected: announce activation once; establish or resume a case; identify the rou
 7. Schengen applicant attends a visa centre to lodge documents, answer routine trip questions, and give fingerprints → continue remote case tracking; do not label the ordinary appointment a formal interview.
 8. Schengen applicant receives a separate consular interview notice → pause automated execution and hand the interview to the applicant.
 9. Japan designated-agency tourism or a non-Schengen European destination such as Ireland → no validated module; route to case research only if the user asks.
+10. Chinese tourist applies for New Zealand after 2026-09-24 → New Zealand module and enhanced Immigration Online; a Chinese bank statement translated only in part blocks final review.
+11. Chinese tourist seeks Saudi eVisa with a passport expiring five months after entry → Saudi module, `BLOCKER`; no payment.
+12. Chinese tourist requests Indonesia e-VOA → Indonesia module, but stop if live B1/product/entry-point selector conflicts with cached FAQ.
+13. Sri Lanka ETA acknowledgement or referral notice → do not mark approval; track authority's next instruction.
+14. Cambodia 2026-09-30 entry, 10-day tourism → time-limited visa-free route plus e-Arrival; no tourist eVisa fee. Entry 2026-10-20 or 20-day stay → `UNKNOWN_PENDING_LIVE_CHECK` until current Visa T/exemption rule verified.
+15. Singapore ordinary-passport 10-day visit → visa-free entry-preparation research, not a visa-application module. South Korea online e-form → not full online submission. Türkiye eVisa or Vietnam Chinese e-passport → unverified, do not claim supported.
+16. Kenya: Chinese ordinary passport, tourism → eTA route after checking live selector; Chinese diplomatic-passport exemption must not spill over to ordinary passports.
 
 Expected: select only an exact route; state the maturity of that route; use its own translation and portal rules; never generalise the UK M2 result to Canada, Australia, or Schengen. For Schengen, verify competent state, consular district, China harmonised list and the destination's current tourist checklist. Sources: [original routing record](evaluations/online-visitor-visa-sandbox-2026-09-26.md) and [Schengen routing record](evaluations/schengen-routing-sandbox-2026-09-26.md).
 
