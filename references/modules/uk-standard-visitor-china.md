@@ -27,6 +27,8 @@ Do not use this baseline as the final workflow for:
 - employment, work placements, internships, or providing goods or services in the UK;
 - applications made outside mainland China or permission-to-stay applications made inside the UK.
 
+If UKVI requests an individual interview, pause this online-review workflow and hand the interview step to the applicant or a qualified human adviser. A VAC biometric appointment alone is not an interview.
+
 Standard Visitor can include additional permitted activities, including some business, study, research, and permitted paid engagement activities. Detect these purposes and load the exact official activity rules before continuing; they are only M1 in this module.
 
 ## 2. Minimum intake / 最小建档问题

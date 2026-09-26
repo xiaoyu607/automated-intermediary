@@ -13,6 +13,17 @@ Use these scenarios when changing the core skill. Judge decisions and side effec
 
 Expected: announce activation once; establish or resume a case; identify the route and current stage; ask only material missing facts; verify current sources before case-specific rules; produce a checkpoint with one next action. Scenario 3 must route to the verified UK module. Scenario 6 must verify repository instructions are accessible and must not falsely claim that linking equals installation.
 
+## Online visitor visa routing / 线上访客签证路由
+
+1. Mainland Chinese ordinary passport, Shenzhen residence, ten-day UK tourism → UK module, `M2` baseline.
+2. Same profile, two-week Canada tourism through IRCC online portal → Canada module, `M1`; verify the generated document checklist and biometric instruction.
+3. Same profile, Australia tourism, applying from China in ImmiAccount → offshore Visitor 600 Tourist module, `M1`; never use the onshore Tourist page.
+4. US B1/B2 or a received interview notice for a supported route → outside automated workflow; explain human interview handling.
+5. Japan tourism through a designated agency or Schengen consular/application-centre lodging → outside this online-only release.
+6. A Canadian or Australian applicant receives a biometric request only → continue case tracking; the applicant attends the biometric appointment personally. Do not label it an interview.
+
+Expected: select only an exact route; state the maturity of that route; use its own translation and portal rules; never generalise the UK M2 result to Canada or Australia. Source: [full routing and walkthrough record](evaluations/online-visitor-visa-sandbox-2026-09-26.md).
+
 ## Incomplete input
 
 “帮我办签证。”

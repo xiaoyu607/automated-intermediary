@@ -1,6 +1,6 @@
 ---
 name: automated-intermediary
-description: Manage visa, university-admission, licence, registration, and other multi-step administrative applications as auditable cases. Use when the user asks Codex to act as an intermediary or case manager, or says 办签证、申请大学、材料清单、材料审核、申请流程、中介代办, wants a personalized evidence checklist, case tracking, rule verification, or pre-submission review. For 中国大陆申请人在中国申请英国标准访客签证, use the verified module. Do not use for a single general fact, translation-only request, or ordinary one-step form edit.
+description: Manage visa, university-admission, licence, registration, and other multi-step administrative applications as auditable cases. Use when the user asks Codex to act as an intermediary or case manager, or says 办签证、申请大学、材料清单、材料审核、申请流程、中介代办, wants a personalized evidence checklist, case tracking, rule verification, or pre-submission review. Visitor-visa modules for mainland Chinese applicants cover UK, Canada, and Australia online applications; route interview-required cases out. Do not use for a single general fact, translation-only request, or ordinary one-step form edit.
 ---
 
 # Automated Intermediary
@@ -15,7 +15,7 @@ Turn a service request into a traceable case without pretending to be an authori
 - Treat `$automated-intermediary` as explicit activation. Natural-language requests matching the frontmatter description are valid implicit activation.
 - When activated, say `已启用 XY-SKILL-001 自动化中介` once, then state the detected service, applicant route, current phase, and immediate next action. Do not repeatedly announce the skill.
 - A repository link alone is not installation or activation. If the user asks Codex to execute from the repository, first verify that this `SKILL.md` and its referenced files are accessible. If they are not installed in the Skills directory, say that the repository is being used as temporary instructions for the current task and offer the installation command.
-- Route an exact match for the available UK module to that module. Treat every other route as fresh case research until a validated module exists; never imply that the whole business category has been validated.
+- For visitor visas, read [references/online-visitor-visa-workflow.md](references/online-visitor-visa-workflow.md), then route exact matches to the UK, Canada, or Australia module below. Exclude cases whose normal route requires a consular interview or offline submission. If a supported authority later requests an interview, pause this Skill's case execution and hand that step to the applicant or qualified human adviser. Biometric collection, passport delivery, and medical examinations are applicant-performed steps, not online interviews.
 - Read [references/test-scenarios.md](references/test-scenarios.md) when changing discovery, activation, routing, or core behavior.
 
 ## Use the workflow contract
@@ -68,7 +68,11 @@ Before using a business-specific module, read [references/domain-module-contract
 
 ### Available business module
 
-- For a mainland Chinese ordinary-passport holder applying in mainland China for a UK Standard Visitor visa, read [references/modules/uk-standard-visitor-china.md](references/modules/uk-standard-visitor-china.md). Its M2-tested baseline covers tourism and visits to family or friends for up to six months; follow its routing rules for other purposes.
+- UK Standard Visitor, mainland Chinese ordinary passport, applying in mainland China: [UK module](references/modules/uk-standard-visitor-china.md). Its recorded baseline is `M2 DRY_RUN`.
+- Canada visitor visa, mainland Chinese ordinary passport, applying in mainland China online: [Canada module](references/modules/canada-visitor-china.md). Current level: `M1 OFFICIAL_REVIEWED`.
+- Australia Visitor visa subclass 600 Tourist stream, mainland Chinese ordinary passport, applying outside Australia from mainland China online: [Australia module](references/modules/australia-visitor-600-china.md). Current level: `M1 OFFICIAL_REVIEWED`.
+
+Read the selected module's official-source registry before giving case-specific requirements. A completed cross-country fictional walkthrough does not upgrade an untested portal or a real case to `M2`.
 
 ## Control consequential actions
 

@@ -8,17 +8,21 @@ Turn visa, university admission, and other intermediary services into an auditab
 
 ## 当前状态 / Current status
 
-> **Beta · M2 simulated validation / 测试版 · M2 模拟验证**  
-> No completed live applicant case yet / 尚无真实申请人完整闭环  
-> Last official-source review / 最近官方来源核验：2026-09-25
+> **Beta · route-specific maturity / 测试版 · 按路径标注成熟度**
+> No completed live applicant case yet / 尚无真实申请人完整闭环
+> Last official-source review / 最近官方来源核验：2026-09-26
 
-当前包含一个业务模块：
+当前包含三条面向中国大陆普通护照持有人、从中国大陆申请的线上访客签证路径：
 
-- 中国大陆普通护照持有人，在中国大陆申请英国标准访客签证；
-- 基础 M2 范围为六个月以内的普通旅游，以及已编写脚本的探亲、资金、工作目的和家庭分支；
-- 其他商务、学习、医疗、结婚、过境等条件分支仅完成官方规则核验，使用前必须重新路由和刷新规则。
+- 英国 Standard Visitor：普通旅游与探亲访友的既有范围为 `M2 DRY_RUN`；
+- 加拿大 Visitor Visa：线上申请及材料审核模块为 `M1 OFFICIAL_REVIEWED`；
+- 澳大利亚 Visitor 600 Tourist stream（境外申请）：线上申请及材料审核模块为 `M1 OFFICIAL_REVIEWED`。
 
-The first domain module covers mainland Chinese ordinary-passport holders applying in mainland China for a UK Standard Visitor visa. The recorded M2 baseline covers ordinary tourism plus scripted family-visit, finance, work-purpose, and family branches. Other conditional purposes remain official-source-reviewed only and require fresh routing before use.
+Three online visitor-visa routes now cover mainland Chinese ordinary-passport holders applying from mainland China: UK Standard Visitor (`M2 DRY_RUN` baseline), Canada Visitor Visa (`M1 OFFICIAL_REVIEWED`), and Australia's offshore Visitor 600 Tourist stream (`M1 OFFICIAL_REVIEWED`). Maturity applies only to each route and tested scenario.
+
+这轮只覆盖正常流程无需面试的线上申请与审核。美国 B1/B2、经指定机构申请的日本旅游签、需要窗口递交的申根短期签证暂不纳入。录指纹、体检或递交护照由申请人按官方通知完成；若某一英/加/澳个案收到面试通知，Skill 暂停该个案并提示人工处理。
+
+This release covers online applications whose ordinary process does not require an interview. US B1/B2, Japan tourism through designated agencies, and Schengen short-stay lodging are outside scope. The applicant completes biometrics, medical checks, or passport delivery when instructed. An individual interview request pauses the Skill's automated case path.
 
 ## 能做什么 / What it does
 
@@ -90,6 +94,7 @@ automated-intermediary/
     ├── source-policy.md
     ├── authorization-boundaries.md
     ├── domain-module-contract.md
+    ├── online-visitor-visa-workflow.md
     ├── test-scenarios.md
     ├── modules/
     └── evaluations/
@@ -110,6 +115,8 @@ automated-intermediary/
 The recorded M2 sandbox ran from intake to simulated `READY_TO_SUBMIT` and detected all deliberately injected critical issues, including financial inconsistencies, omitted refusal history, defective translations, unsafe standing authorization, and unresolved dynamic portal rules.
 
 - [完整沙盒报告 / Full sandbox report](references/evaluations/uk-standard-visitor-china-m2-sandbox-2026-09-25.md)
+- [线上访客签证九关流程 / Online visitor visa nine-gate workflow](references/online-visitor-visa-workflow.md)
+- [三国路由及完整虚构流程演练 / Three-country routing and complete fictional walkthrough](references/evaluations/online-visitor-visa-sandbox-2026-09-26.md)
 - [模块测试集 / Module test set](references/modules/uk-standard-visitor-china-tests.md)
 - [官方来源台账 / Official source registry](references/modules/uk-standard-visitor-china-sources.md)
 
